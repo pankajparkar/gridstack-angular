@@ -49,7 +49,7 @@
           scope.gsItemHeight = val;
         });
 
-        element.bind('$destroy', function() {
+        scope.$on('$destroy', function() {
           var item = element.data('_gridstack_node');
           scope.onItemRemoved({item: item});
           controller.removeItem(element);
